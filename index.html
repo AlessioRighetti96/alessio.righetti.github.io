@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alessio Righetti — Senior Software Developer</title>
+  <meta name="description" content="CV online di Alessio Righetti, Senior Software Developer con 10 anni di esperienza in Java, Spring, .NET, Entity Framework e COBOL." />
+  <meta property="og:title" content="Alessio Righetti — Senior Software Developer" />
+  <meta property="og:description" content="CV e portfolio professionale di Alessio Righetti." />
+  <meta property="og:type" content="website" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=boska@500,700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+      --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
+      --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg: #f7f6f2;
+      --color-surface: #fbfbf9;
+      --color-surface-2: #f3f0ec;
+      --color-border: #d4d1ca;
+      --color-divider: #dcd9d5;
+      --color-text: #28251d;
+      --color-text-muted: #6f6c65;
+      --color-text-faint: #9d9990;
+      --color-primary: #0b5e63;
+      --color-primary-hover: #08464a;
+      --color-primary-highlight: #d9e7e5;
+      --color-text-inverse: #f9f8f4;
+      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem; --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(40,37,29,.06);
+      --shadow-md: 0 8px 24px rgba(40,37,29,.08);
+      --content-default: 1100px;
+      --font-display: 'Boska', Georgia, serif;
+      --font-body: 'General Sans', 'Inter', sans-serif;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #171614;
+      --color-surface: #1c1b19;
+      --color-surface-2: #22211f;
+      --color-border: #393836;
+      --color-divider: #2b2a28;
+      --color-text: #cdccca;
+      --color-text-muted: #9b9892;
+      --color-text-faint: #6f6c67;
+      --color-primary: #62a6af;
+      --color-primary-hover: #7cb9c1;
+      --color-primary-highlight: #2b3536;
+      --color-text-inverse: #171614;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.24);
+      --shadow-md: 0 10px 28px rgba(0,0,0,.32);
+    }
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--color-bg);color:var(--color-text)}
+    img,svg{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none;transition:color var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition)}
+    button{font:inherit;border:none;background:none;cursor:pointer}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:-9999px;top:0}.skip-link:focus{left:var(--space-4);top:var(--space-4);background:var(--color-surface);padding:var(--space-3) var(--space-4);z-index:100;border-radius:var(--radius-md)}
+    .container{width:min(calc(100% - 2rem), var(--content-default));margin-inline:auto}
+    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--color-bg) 86%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-divider)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) 0;gap:var(--space-4)}
+    .brand{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:600}
+    .brand svg{width:34px;height:34px;color:var(--color-primary)}
+    .nav{display:flex;gap:var(--space-4);flex-wrap:wrap;align-items:center}
+    .nav a{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .nav a:hover,.nav a.active{color:var(--color-text)}
+    .theme-toggle{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--color-border);border-radius:var(--radius-full);background:var(--color-surface)}
+    .hero{padding:clamp(var(--space-16), 12vw, 8rem) 0 var(--space-16)}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:var(--space-8);align-items:end}
+    .eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);border-radius:var(--radius-full);background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    h1{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1.02;max-width:10ch;margin-top:var(--space-5)}
+    .hero p{max-width:64ch;margin-top:var(--space-5);color:var(--color-text-muted)}
+    .hero-actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 var(--space-5);border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:600;border:1px solid var(--color-border)}
+    .btn-primary{background:var(--color-primary);border-color:var(--color-primary);color:var(--color-text-inverse)}
+    .btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{background:var(--color-surface)}
+    .card{background:var(--color-surface);border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}
+    .hero-card{padding:var(--space-6)}
+    .hero-card dl{display:grid;gap:var(--space-4)}
+    .hero-card dt{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.04em;color:var(--color-text-faint);font-weight:700}
+    .hero-card dd{font-size:var(--text-sm);color:var(--color-text)}
+    .section{padding:var(--space-12) 0}
+    .section-title{font-size:var(--text-xl);font-family:var(--font-display);margin-bottom:var(--space-6)}
+    .section-subtitle{font-size:var(--text-sm);text-transform:uppercase;letter-spacing:.05em;color:var(--color-text-faint);margin-bottom:var(--space-2)}
+    .about-grid,.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--space-6)}
+    .panel{padding:var(--space-6)}
+    .pill-list{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+    .pill{padding:var(--space-2) var(--space-3);border-radius:var(--radius-full);background:var(--color-surface-2);font-size:var(--text-sm);color:var(--color-text-muted);border:1px solid var(--color-border)}
+    .timeline{display:grid;gap:var(--space-5)}
+    .timeline-item{padding:var(--space-6)}
+    .timeline-top{display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;margin-bottom:var(--space-4)}
+    .timeline h3{font-size:var(--text-lg);line-height:1.2}
+    .muted{color:var(--color-text-muted)}
+    ul.clean{list-style:none;display:grid;gap:var(--space-3)}
+    ul.clean li{position:relative;padding-left:1.1rem;color:var(--color-text-muted)}
+    ul.clean li::before{content:'';position:absolute;left:0;top:.65rem;width:.45rem;height:.45rem;border-radius:50%;background:var(--color-primary)}
+    .contact-list{display:grid;gap:var(--space-4)}
+    .contact-item{display:flex;justify-content:space-between;gap:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider)}
+    .contact-item span:first-child{color:var(--color-text-faint);font-size:var(--text-sm)}
+    .footer{padding:var(--space-10) 0 var(--space-12);color:var(--color-text-faint);font-size:var(--text-sm)}
+    @media (max-width: 860px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      h1{max-width:12ch}
+      .header-inner{align-items:flex-start;flex-direction:column}
+      .nav{gap:var(--space-3)}
+      .contact-item{flex-direction:column}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Logo e nome">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="8" y="8" width="48" height="48" rx="14" stroke="currentColor" stroke-width="4"/>
+          <path d="M20 42V22H34C40 22 44 25.5 44 31C44 36.5 40 40 34 40H28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 40L42 42" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span>Alessio Righetti</span>
+      </div>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#profilo">Profilo</a>
+        <a href="#esperienza">Esperienza</a>
+        <a href="#formazione">Formazione</a>
+        <a href="#competenze">Competenze</a>
+        <a href="#contatti">Contatti</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Attiva modalità scura">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">CV online · GitHub Pages</span>
+          <h1>Senior Software Developer con 10 anni di esperienza.</h1>
+          <p>Sviluppatore software con esperienza su progetti per il settore bancario, specializzato in Java con Spring, .NET con Razor ed Entity Framework, e COBOL. Mi piace trasformare esigenze concrete in soluzioni software utili, affidabili e ben organizzate.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:righetti1996@gmail.com">Contattami</a>
+            <a class="btn btn-secondary" href="https://github.com/AlessioRighetti96" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <aside class="card hero-card" aria-label="Informazioni rapide">
+          <dl>
+            <div>
+              <dt>Nome</dt>
+              <dd>Alessio Righetti</dd>
+            </div>
+            <div>
+              <dt>Ruolo</dt>
+              <dd>Senior Software Developer</dd>
+            </div>
+            <div>
+              <dt>Città</dt>
+              <dd>Verona, Italia</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:righetti1996@gmail.com">righetti1996@gmail.com</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="profilo">
+      <div class="container about-grid">
+        <div class="card panel">
+          <div class="section-subtitle">Profilo</div>
+          <h2 class="section-title">Chi sono</h2>
+          <p>Sviluppatore software con 10 anni di esperienza, appassionato di informatica e tecnologia. Ho lavorato su progetti in Java con Spring, .NET con Razor ed Entity Framework, e COBOL, mantenendo sempre interesse per nuovi linguaggi e approcci di sviluppo.</p>
+          <p style="margin-top:1rem;color:var(--color-text-muted)">Mi piace trasformare esigenze concrete in soluzioni software utili, affidabili e ben organizzate, con particolare attenzione alla chiarezza del codice e alla qualità del risultato finale.</p>
+        </div>
+        <div class="card panel">
+          <div class="section-subtitle">Dettagli</div>
+          <h2 class="section-title">Punti chiave</h2>
+          <div class="pill-list" aria-label="Punti chiave del profilo">
+            <span class="pill">10 anni di esperienza</span>
+            <span class="pill">Java + Spring</span>
+            <span class="pill">.NET</span>
+            <span class="pill">Razor</span>
+            <span class="pill">Entity Framework</span>
+            <span class="pill">COBOL</span>
+            <span class="pill">Settore bancario</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="esperienza">
+      <div class="container">
+        <div class="section-subtitle">Percorso</div>
+        <h2 class="section-title">Esperienza professionale</h2>
+        <div class="timeline">
+          <article class="card timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Senior Software Developer · AddValue</h3>
+                <p class="muted">Sviluppo applicazioni per clienti del settore bancario</p>
+              </div>
+              <p class="muted">Ottobre 2015 — Oggi</p>
+            </div>
+            <ul class="clean">
+              <li>Sviluppo di applicazioni e soluzioni software per clienti bancari.</li>
+              <li>Utilizzo di tecnologie Java con Spring, .NET con Razor ed Entity Framework, e COBOL.</li>
+              <li>Focus su affidabilità, manutenzione del codice e risposta a esigenze operative reali.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="formazione">
+      <div class="container">
+        <div class="section-subtitle">Studi</div>
+        <h2 class="section-title">Formazione</h2>
+        <article class="card timeline-item">
+          <div class="timeline-top">
+            <div>
+              <h3>ITIS Guglielmo Marconi</h3>
+              <p class="muted">Percorso di studi tecnico</p>
+            </div>
+            <p class="muted">2010 — 2015</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="competenze">
+      <div class="container about-grid">
+        <div class="card panel">
+          <div class="section-subtitle">Stack</div>
+          <h2 class="section-title">Competenze tecniche</h2>
+          <div class="pill-list">
+            <span class="pill">Java</span>
+            <span class="pill">Spring</span>
+            <span class="pill">.NET</span>
+            <span class="pill">Razor</span>
+            <span class="pill">Entity Framework</span>
+            <span class="pill">COBOL</span>
+            <span class="pill">Sviluppo software</span>
+            <span class="pill">Applicazioni enterprise</span>
+          </div>
+        </div>
+        <div class="card panel">
+          <div class="section-subtitle">Lingue</div>
+          <h2 class="section-title">Comunicazione</h2>
+          <div class="contact-list">
+            <div class="contact-item"><span>Italiano</span><strong>Madrelingua</strong></div>
+            <div class="contact-item"><span>Inglese</span><strong>Scolastico</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contatti">
+      <div class="container contact-grid">
+        <div class="card panel">
+          <div class="section-subtitle">Contatti</div>
+          <h2 class="section-title">Riferimenti</h2>
+          <div class="contact-list">
+            <div class="contact-item"><span>Email</span><a href="mailto:righetti1996@gmail.com">righetti1996@gmail.com</a></div>
+            <div class="contact-item"><span>GitHub</span><a href="https://github.com/AlessioRighetti96" target="_blank" rel="noopener noreferrer">github.com/AlessioRighetti96</a></div>
+            <div class="contact-item"><span>LinkedIn</span><span class="muted">Da aggiungere</span></div>
+            <div class="contact-item"><span>Città</span><span>Verona</span></div>
+          </div>
+        </div>
+        <div class="card panel">
+          <div class="section-subtitle">Nota</div>
+          <h2 class="section-title">Disponibilità</h2>
+          <p class="muted">Questo sito è pensato come CV online semplice, leggibile e pronto per GitHub Pages. Puoi ampliarlo in seguito con progetti, formazione, certificazioni e link LinkedIn.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Alessio Righetti · CV online realizzato per GitHub Pages.</div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      const setIcon = () => {
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Attiva modalità chiara' : 'Attiva modalità scura');
+      };
+      setIcon();
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        setIcon();
+      });
+
+      const links = document.querySelectorAll('.nav a');
+      const sections = [...links].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+          }
+        });
+      }, { threshold: 0.45 });
+      sections.forEach(section => observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
